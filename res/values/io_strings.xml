@@ -26,4 +26,9 @@
     <!-- About phone screen, Infinitive-OS version -->
     <string name="mod_version">Infinitive-OS version</string>
     <string name="mod_version_default">Unknown</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+
 </resources>
