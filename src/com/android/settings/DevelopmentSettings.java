@@ -180,6 +180,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             "chamber_of_unlocked_secrets";
 
     private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
+    private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
 
     private static final int RESULT_DEBUG_APP = 1000;
 
@@ -268,6 +269,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mDevelopmentShortcut;
 
+    private CheckBoxPreference mAdvancedReboot;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<SwitchPreference> mResetSwitchPrefs
@@ -340,6 +343,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
         mDevelopmentShortcut = findAndInitSwitchPref(DEVELOPMENT_SHORTCUT_KEY);
+        mAdvancedReboot = findAndInitCheckboxPref(ADVANCED_REBOOT_KEY);
 
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
@@ -349,6 +353,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
             disableForUser(mDevelopmentShortcut);
+            disableForUser(mAdvancedReboot);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
@@ -645,6 +650,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateUSBAudioOptions();
         updateRootAccessOptions();
         updateDevelopmentShortcutOptions();
+        updateAdvancedRebootOptions();
     }
 
     private void resetDevelopmentShortcutOptions() {
@@ -689,6 +695,17 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else {
             mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
         }
+    }
+
+    private void writeAdvancedRebootOptions() {
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.Secure.ADVANCED_REBOOT,
+                mAdvancedReboot.isChecked() ? 1 : 0);
+    }
+
+    private void updateAdvancedRebootOptions() {
+        mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.ADVANCED_REBOOT, 0) != 0);
     }
 
     private void resetDangerousOptions() {
@@ -1680,6 +1697,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             }
         } else if (preference == mDevelopmentShortcut) {
             writeDevelopmentShortcutOptions();
+        } else if (preference == mAdvancedReboot) {
+            writeAdvancedRebootOptions();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
