@@ -25,6 +25,7 @@ import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
 import com.android.settings.livedisplay.DisplayGamma;
 import com.android.settings.slim.HardwareKeysSettings;
+import com.android.settings.location.LocationSettings;
 
 public class BootReceiver extends BroadcastReceiver {
     @Override
@@ -35,5 +36,6 @@ public class BootReceiver extends BroadcastReceiver {
         HardwareKeysSettings.restore(ctx);
         VibratorIntensity.restore(ctx);
         InputMethodAndLanguageSettings.restore(ctx);
+        LocationSettings.restore(context);
     }
 }
