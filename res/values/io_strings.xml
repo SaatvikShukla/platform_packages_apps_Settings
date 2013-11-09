@@ -44,6 +44,10 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default" translatable="false">2015-01-01-0000</string>
 
+    <!-- Gesture Settings -->
+    <!-- Settings main menu entry -->
+    <string name="gesture_settings_title">Gestures</string>
+
     <!-- Navigation Bar -->
     <string name="navigation_bar_category">Navigation bar</string>
     <string name="navigation_bar_left_title">Left-handed mode</string>
