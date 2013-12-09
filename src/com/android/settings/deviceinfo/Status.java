@@ -17,7 +17,6 @@
 package com.android.settings.deviceinfo;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.ClipboardManager;
@@ -267,6 +266,11 @@ public class Status extends PreferenceActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        ActionBar mActionBar = getActionBar();
+        if (mActionBar != null) {
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         mHandler = new MyHandler(this);
 
         mCM = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
@@ -289,12 +293,6 @@ public class Status extends PreferenceActivity {
         mRes = getResources();
         mUnknown = mRes.getString(R.string.device_info_default);
         mUnavailable = mRes.getString(R.string.status_unavailable);
-
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            // android.R.id.home will be triggered in onOptionsItemSelected()
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
 
         if (UserHandle.myUserId() == UserHandle.USER_OWNER &&
                 (!isMultiSimEnabled())) {
@@ -424,6 +422,15 @@ public class Status extends PreferenceActivity {
             intent.putExtra(SelectSubscription.TARGET_CLASS,
                     "com.android.settings.deviceinfo.msim.MSimSubscriptionStatus");
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -676,18 +683,6 @@ public class Status extends PreferenceActivity {
         return (SubscriptionController.getInstance().getActiveSubInfoCount() > 1);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        final int itemId = item.getItemId();
-        switch (itemId) {
-            case android.R.id.home:
-                goUpToTopLevelSetting(this);
-                return true;
-            default:
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     private String getSerialNumber() {
         CmHardwareManager cmHardwareManager =
                 (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
@@ -696,12 +691,5 @@ public class Status extends PreferenceActivity {
         } else {
             return Build.SERIAL;
         }
-    }
-
-    /**
-     * Finish current Activity and go up to the top level Settings.
-     */
-    private static void goUpToTopLevelSetting(Activity activity) {
-        activity.finish();
     }
 }
