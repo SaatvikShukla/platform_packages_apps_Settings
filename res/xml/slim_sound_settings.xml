@@ -37,6 +37,11 @@
         android:title="@string/swap_volume_buttons_title"
         android:summary="@string/swap_volume_buttons_summary" />
 
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:fragment="com.android.settings.io.VolumeSteps"
+        android:title="@string/volume_steps_title" />
+
     <PreferenceCategory
         android:title="@string/notifications_category_title" />
 
