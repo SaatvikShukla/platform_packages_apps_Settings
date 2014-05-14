@@ -101,7 +101,8 @@ public class IOSettings extends SettingsPreferenceFragment {
             frags[4] = new RecentPanel();
             frags[5] = new PowerMenuActions();
             frags[6] = new ScreenAndAnimations();
-            frags[7] = new About();
+            frags[7] = new AppCircleSidebar();
+            frags[8] = new About();
         }
 
         @Override
@@ -130,6 +131,7 @@ public class IOSettings extends SettingsPreferenceFragment {
                     getString(R.string.recent_panel_category),
                     getString(R.string.power_menu_title),
                     getString(R.string.screen_and_animations_title),
+                    getString(R.string.app_circle_bar_title),
                     getString(R.string.about_io)};
         return titleString;
     }
