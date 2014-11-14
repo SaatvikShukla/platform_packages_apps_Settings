@@ -28,6 +28,11 @@
                 android:targetClass="com.android.settings.SetFullBackupPassword" />
     </PreferenceScreen>
 
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.io.hfm.HfmSettings" />
+
     <SwitchPreference
         android:key="keep_screen_on"
         android:title="@string/keep_screen_on"
