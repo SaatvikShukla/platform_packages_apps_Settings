@@ -748,6 +748,11 @@ public final class Utils {
         context.startActivityAsUser(intent, userHandle);
     }
 
+    /* returns whether the device has volume rocker or not. */
+    public static boolean hasVolumeRocker(Context context) {
+        return context.getResources().getBoolean(R.bool.has_volume_rocker);
+    }
+
     /**
      * Build an Intent to launch a new activity showing the selected fragment.
      * The implementation constructs an Intent that re-launches the current activity with the
