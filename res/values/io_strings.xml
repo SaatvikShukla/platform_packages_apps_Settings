@@ -215,4 +215,8 @@
     <string name="battery_saver_title">Warning color</string>
     <string name="battery_saver_style_reset_message">Reset battery saver warning color?</string>
 
+    <!-- QuickSettings collapse panel -->
+    <string name="quick_settings_collapse_title">Auto close panel</string>
+    <string name="quick_settings_collapse_summary">Close the Quick Settings panel upon toggle</string>
+
 </resources>
