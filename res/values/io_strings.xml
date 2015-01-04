@@ -283,4 +283,7 @@
     <string name="animation_duration_title">Animation duration</string>
     <string name="animation_duration_default">Default</string>
 
+    <!-- Animation Section -->
+    <string name="screen_and_animations_title">Animation controls</string>
+
 </resources>
