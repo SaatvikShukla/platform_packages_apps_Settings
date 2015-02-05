@@ -31,6 +31,8 @@ import com.android.settings.slim.NavBarButtonStyle;
 import com.android.settings.slim.NavbarStyleDimenSettings;
 import com.android.settings.slim.StatusBarClockStyle;
 import com.android.settings.slim.StatusBar;
+import com.android.settings.io.LockScreenWeatherSettings;
+import com.android.settings.io.LockScreenColorSettings;
 import com.android.settings.io.NavigationBarSettings;
 import com.android.settings.slim.NavbarSettings;
 import com.android.settings.slim.RecentPanel;
