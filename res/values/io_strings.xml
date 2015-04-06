@@ -332,4 +332,8 @@
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
 
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Force expanded notification</string>
+    <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
+
 </resources>
