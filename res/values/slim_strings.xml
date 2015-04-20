@@ -1103,4 +1103,10 @@
     <!-- SIM -->
     <string name="sim_no_number_set">No number assigned</string>
 
+    <!-- Lock screen shortcuts -->
+    <string name="lockscreen_shortcut_title">Lockscreen shortcuts</string>
+    <string name="lockscreen_bottom_shortcuts_title">Enable bottom shortcuts</string>
+    <string name="lockscreen_bottom_shortcuts_enabled">Lockscreen phone and camera shortcuts are enabled</string>
+    <string name="lockscreen_bottom_shortcuts_disabled">Lockscreen phone and camera shortcuts are disabled</string>
+
 </resources>
