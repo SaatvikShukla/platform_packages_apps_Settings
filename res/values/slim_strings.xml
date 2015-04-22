@@ -1193,4 +1193,8 @@
     <string name="lto_download_data_wifi_only_on">Over any networks</string>
     <string name="lto_download_data_wifi_only_off">Only over Wi\u2011Fi networks</string>
 
+    <!-- Zen Mode -->
+    <string name="zen_mode_none_category">No interruptions</string>
+    <string name="allow_lights_title">Allow notification lights</string>
+
 </resources>
