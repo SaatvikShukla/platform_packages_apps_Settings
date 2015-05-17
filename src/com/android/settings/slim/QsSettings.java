@@ -42,6 +42,12 @@ import java.util.Locale;
 public class QsSettings extends SettingsPreferenceFragment
             implements OnPreferenceChangeListener  {
 
+     // status bar power menu
+    private ListPreference mStatusBarPowerMenu;
+
+    // status bar power menu
+    private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
+
     public static final String TAG = "QsSettings";
 
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
