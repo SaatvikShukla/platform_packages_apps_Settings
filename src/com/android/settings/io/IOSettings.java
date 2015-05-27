@@ -99,7 +99,8 @@ public class IOSettings extends SettingsPreferenceFragment {
             frags[2] = new QsSettings();
             frags[3] = new RecentPanel();
             frags[4] = new PowerMenuActions();
-            frags[5] = new About();
+            frags[5] = new ScreenAndAnimations();
+            frags[6] = new About();
         }
 
         @Override
@@ -126,6 +127,7 @@ public class IOSettings extends SettingsPreferenceFragment {
                     getString(R.string.title_qs_tiles),
                     getString(R.string.recent_panel_category),
                     getString(R.string.power_menu_title),
+                    getString(R.string.screen_and_animations_title),
                     getString(R.string.about_io)};
         return titleString;
     }
