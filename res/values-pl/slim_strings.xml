@@ -537,9 +537,9 @@
   <string name="screen_off_gesture_settings_title">Gesty na wyłączonym ekranie</string>
   <string name="lcd_density">Gęstość LCD</string>
   <string name="dialog_title_lcd_density">Gęstość LCD</string>
-  <string name="lcd_density_value_format">%d DPI</string>
-  <string name="lcd_density_default_value_format">%d DPI (domyślnie)</string>
   <string name="restarting_ui">Restart UI\u2026</string>
+  <string name="lcd_density_value_format">%1$d DPI (Domyślnie: %2$d DPI)</string>
+  <string name="lcd_density_default_value_format">%1$d DPI (domyślnie)</string>
   <string name="su_indicator_title">Wskaźnik Superuser</string>
   <string name="su_indicator_summary">Wskaźnik Superuser, kiedy sesja su jest aktywna</string>
   <string name="su_indicator_icon">Ikona paska stanu</string>
