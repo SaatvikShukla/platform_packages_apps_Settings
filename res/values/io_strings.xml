@@ -286,4 +286,8 @@
     <!-- Animation Section -->
     <string name="screen_and_animations_title">Animation controls</string>
 
+    <!-- Statusbar Infinitive logo -->
+    <string name="status_bar_infinitive_logo_title">Infinitive logo</string>
+    <string name="status_bar_infinitive_logo_summary">Enable to show Infinitive logo on the left side of statusbar</string>
+
 </resources>
