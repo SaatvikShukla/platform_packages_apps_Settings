@@ -113,4 +113,12 @@
         android:summary="@string/double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
+    <!-- Breathing Notifications -->
+    <PreferenceScreen
+            android:key="breathing_notifications"
+            android:fragment="com.android.settings.io.BreathingNotifications"
+            android:title="@string/breathing_notifications_title" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
