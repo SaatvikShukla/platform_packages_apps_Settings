@@ -423,4 +423,9 @@
     <string name="volume_keys_control_ring_stream_title">Volume keys control ringtone volume</string>
     <string name="volume_keys_control_ring_stream_summary">If on, volume keys control ringtone volume. If off, volume keys control media volume.</string>
 
+    <!-- Keep screen on strings -->
+    <string name="keep_screen_on_never">Never</string>
+    <string name="keep_screen_on_debugging">While USB debugging</string>
+    <string name="keep_screen_on_charging">While charging</string>
+
 </resources>
