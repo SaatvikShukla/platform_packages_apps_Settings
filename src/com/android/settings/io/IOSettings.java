@@ -21,6 +21,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.settings.slim.NavigationSettings;
+import com.android.settings.slim.PieControl;
+import com.android.settings.slim.PieStyleSettings;
+import com.android.settings.slim.PieButtonStyleSettings;
+import com.android.settings.slim.PieTriggerSettings;
+import com.android.settings.slim.InputMethodsSettings;
+import com.android.settings.slim.NavBarButtonStyle;
+import com.android.settings.slim.NavbarStyleDimenSettings;
 import com.android.settings.slim.StatusBarClockStyle;
 import com.android.settings.slim.StatusBar;
 import com.android.settings.io.NavigationBarSettings;

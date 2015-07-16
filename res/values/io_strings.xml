@@ -154,4 +154,7 @@
 
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
+
+    <string name="button_pref_title">Buttons</string>
+
 </resources>
