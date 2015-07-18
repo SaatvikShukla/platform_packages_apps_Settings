@@ -30,32 +30,29 @@
     <string name="device_category_xiaomi_title">XIAOMI</string>   
 
     <!-- Samsung device Maintainers -->
-    <string name="device_samsung_ariesve">Galaxy S Plus</string>
-    <string name="device_samsung_ariesve_summary">Ariesve \nMaintainer - nilac8991</string>
     <string name="device_samsung_i9082">Galaxy Grand Duos</string>
     <string name="device_samsung_i9082_summary">I9082 \nMaintainer - jackeagle</string>
-    <string name="device_samsung_kmini3g">Galaxy S5 Mini</string>
-    <string name="device_samsung_kmini3g_summary">Kmini3g \nMaintainer - jackeagle</string>
     <string name="device_samsung_s3ve3g">Galaxy S3 Neo</string>
     <string name="device_samsung_s3ve3g_summary">S3ve3g \nMaintainer - jackeagle</string>
-
 
     <!-- Motorola device Maintaniers -->
     <string name="device_motorola_titan">Moto G 2014</string>
     <string name="device_motorola_titan_summary">Titan \nMaintainer - Thecrazyskull</string>
     <string name="device_motorola_falcon">Moto G</string>
     <string name="device_motorola_falcon_summary">Falcon \nMaintainer - Thecrazyskull</string>
+    <string name="device_motorola_condor">Moto E</string>
+    <string name="device_motorola_condor_summary">Condor \nMaintainer - Vatsal Koradia</string>
 
     <!-- Xiaomi device Maintaniers -->
     <string name="device_xiaomi_armani">Redmi 1S</string>
-    <string name="device_xiaomi_armani_summary">Armani \nMaintainer - Deepak Sharma</string>
+    <string name="device_xiaomi_armani_summary">Armani \nMaintainer - TechExhibeo</string>
     <string name="device_xiaomi_cancro">Mi3</string>
     <string name="device_xiaomi_cancro_summary">Cancro \nMaintainer - jackeagle</string>
 
     <!-- Yu device Maintaniers -->
 
     <string name="device_yu_tomato">Yureka</string>
-    <string name="device_yu_tomato_summary">Tomato \nMaintainer - Men_in_black007</string>
+    <string name="device_yu_tomato_summary">Tomato \nMaintainer - CodeZero</string>
 
     <!-- Sony device Maintaniers -->
 
@@ -63,13 +60,9 @@
     <string name="device_sony_taoshan_summary">Taoshan \nMaintainer - Rohan Purohit</string>
     <string name="device_sony_yuga">Xperia Z</string>
     <string name="device_sony_yuga_summary">Yuga \nMaintainer - Rohan Purohit</string>
-    <string name="device_sony_honami">Xperia Z1</string>
-    <string name="device_sony_honami_summary">Honami \nMaintainer - Rohan Purohit</string>
-    <string name="device_sony_sirius">Xperia Z2</string>
-    <string name="device_sony_sirius_summary">Sirius \nMaintainer - Rohan Purohit</string>
     <string name="device_sony_leo">Xperia Z3</string>
     <string name="device_sony_leo_summary">Leo \nMaintainer - Rohan Purohit</string>
-    <string name="device_sony_togari">Xperia ZL</string>
+    <string name="device_sony_togari">Xperia ZU</string>
     <string name="device_sony_togari_summary">Togari \nMaintainer - Saatvik Shukla</string>
 
     <!-- Nexus device Maintaniers -->

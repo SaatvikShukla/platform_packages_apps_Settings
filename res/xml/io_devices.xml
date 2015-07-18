@@ -37,17 +37,6 @@
                  android:title="@string/device_samsung_i9082" />
 
              <Preference
-                 android:id="@+id/device_samsung_ariesve"
-                 android:summary="@string/device_samsung_ariesve_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_samsung_ariesve" />
-             <Preference
-                 android:id="@+id/device_samsung_kmini3g"
-                 android:summary="@string/device_samsung_kmini3g_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_samsung_kmini3g" />
-
-             <Preference
                  android:id="@+id/device_samsung_s3ve3g"
                  android:summary="@string/device_samsung_s3ve3g_summary"
                  android:selectable="false" 
@@ -70,19 +59,7 @@
                  android:summary="@string/device_sony_yuga_summary"
                  android:selectable="false" 
                  android:title="@string/device_sony_yuga" />
-
-             <Preference
-                 android:id="@+id/device_sony_honami"
-                 android:summary="@string/device_sony_honami_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_sony_honami" />
              
-             <Preference
-                 android:id="@+id/device_sony_sirius"
-                 android:summary="@string/device_sony_sirius_summary"
-                 android:selectable="false" 
-                 android:title="@string/device_sony_sirius" />
-
              <Preference
                  android:id="@+id/device_sony_leo"
                  android:summary="@string/device_sony_leo_summary"
@@ -126,6 +103,12 @@
                  android:summary="@string/device_motorola_falcon_summary"
                  android:selectable="false" 
                  android:title="@string/device_motorola_falcon" />
+
+             <Preference
+                 android:id="@+id/device_motorola_condor"
+                 android:summary="@string/device_motorola_condor_summary"
+                 android:selectable="false"
+                 android:title="@string/device_motorola_condor" />
 
         </PreferenceCategory>
 
