@@ -59,13 +59,13 @@ public class About extends SettingsPreferenceFragment {
         if (preference == mSiteUrl) {
             launchUrl("http://aogp-devs.com/");
         } else if (preference == mSourceUrl) {
-            launchUrl("https://github.com/InfinitiveOS");
+            launchUrl("https://github.com/Infinitive-OS");
         } else if (preference == mGerritUrl) {
             launchUrl("http://gerrit.aogp-devs.com");
         } else if (preference == mGoogleUrl) {
             launchUrl("https://plus.google.com/communities/106007367793741615251");
         } else if (preference == mDownloadUrl) {
-            launchUrl("https://sourceforge.net/projects/infinitiveos/files/");
+            launchUrl("http://download.aogp-devs.com");
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
