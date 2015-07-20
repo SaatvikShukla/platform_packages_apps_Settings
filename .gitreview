@@ -1,0 +1,5 @@
+[gerrit]
+host=gerrit.aogp-devs.com
+port=29418
+project=packages_apps_Settings.git
+defaultbranch=io-1.0
