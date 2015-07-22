@@ -380,4 +380,10 @@
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of trigger area</string>
 
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Temperature style</string>
+    <string name="status_bar_temperature_hidden">Hidden</string>
+    <string name="status_bar_temperature_show_scale">Scale showing</string>
+    <string name="status_bar_temperature_hide_scale">Scale hidden</string>
+
 </resources>
