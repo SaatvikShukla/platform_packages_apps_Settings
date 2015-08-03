@@ -2255,7 +2255,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.settings.liquid.hfm.HfmWhitelist"
+        <activity android:name="com.android.settings.io.hfm.HfmWhitelist"
             android:label="@string/hfm_whitelist_title"
             android:taskAffinity="com.android.settings" />
 

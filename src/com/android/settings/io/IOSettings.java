@@ -34,6 +34,7 @@ import com.android.settings.slim.StatusBar;
 import com.android.settings.io.LockScreenWeatherSettings;
 import com.android.settings.io.LockScreenColorSettings;
 import com.android.settings.io.NavigationBarSettings;
+import com.android.settings.io.BatterySettings;
 import com.android.settings.slim.NavbarSettings;
 import com.android.settings.slim.RecentPanel;
 import com.android.settings.slim.QsSettings;
@@ -94,13 +95,14 @@ public class IOSettings extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new StatusBar();
-            frags[1] = new NavigationBarSettings();
-            frags[2] = new QsSettings();
-            frags[3] = new RecentPanel();
-            frags[4] = new PowerMenuActions();
-            frags[5] = new ScreenAndAnimations();
-            frags[6] = new About();
+            frags[0] = new BatterySettings();
+            frags[1] = new StatusBar();
+            frags[2] = new NavigationBarSettings();
+            frags[3] = new QsSettings();
+            frags[4] = new RecentPanel();
+            frags[5] = new PowerMenuActions();
+            frags[6] = new ScreenAndAnimations();
+            frags[7] = new About();
         }
 
         @Override
@@ -122,6 +124,7 @@ public class IOSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
+                    getString(R.string.battery_settings_title),
                     getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
                     getString(R.string.title_qs_tiles),
