@@ -53,6 +53,7 @@ import android.os.Handler;
 import android.preference.PreferenceScreen;
 import android.provider.Settings.SettingNotFoundException;
 import com.android.settings.Utils;
+import com.android.settings.io.CarrierLabel;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 

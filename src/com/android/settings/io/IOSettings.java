@@ -33,7 +33,6 @@ import com.android.settings.slim.StatusBarClockStyle;
 import com.android.settings.slim.StatusBar;
 import com.android.settings.io.LockScreenWeatherSettings;
 import com.android.settings.io.LockScreenColorSettings;
-import com.android.settings.io.NavigationBarSettings;
 import com.android.settings.io.BatterySettings;
 import com.android.settings.slim.NavbarSettings;
 import com.android.settings.slim.RecentPanel;
@@ -97,7 +96,7 @@ public class IOSettings extends SettingsPreferenceFragment {
             super(fm);
             frags[0] = new BatterySettings();
             frags[1] = new StatusBar();
-            frags[2] = new NavigationBarSettings();
+            frags[2] = new NavbarSettings();
             frags[3] = new QsSettings();
             frags[4] = new RecentPanel();
             frags[5] = new PowerMenuActions();
