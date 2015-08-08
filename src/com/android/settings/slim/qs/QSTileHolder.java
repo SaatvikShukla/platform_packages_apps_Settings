@@ -181,6 +181,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_pie_on";
                 stringId = R.string.qs_tile_slimpie;
                 break;
+            case QSConstants.TILE_KERNEL_ADIUTOR:
+                resourceName = "ic_qs_kernel_adiutor";
+                stringId = R.string.qs_tile_kernel_adiutor;
+                break;
             default:
                 return null;
         }
