@@ -27,4 +27,6 @@
         <attr name="unitsLeft" format="string|reference" />
         <attr name="unitsRight" format="string|reference" />
     </declare-styleable>
+
+    <integer name="dashboard_num_columns">2</integer>
 </resources>
