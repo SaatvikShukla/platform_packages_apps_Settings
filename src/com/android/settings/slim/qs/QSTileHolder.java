@@ -177,6 +177,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_power";
                 stringId = R.string.qs_screen_off_tile;
                 break;
+            case QSConstants.TILE_SLIMPIE:
+                resourceName = "ic_qs_pie_on";
+                stringId = R.string.qs_tile_slimpie;
+                break;
             default:
                 return null;
         }

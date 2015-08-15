@@ -507,6 +507,7 @@
     <string name="qs_battery_saver_tile">Battery saver</string>
     <string name="qs_brightness_tile">Brightness</string>
     <string name="qs_screen_off_tile">Screen off</string>
+    <string name="qs_tile_slimpie">Pie Control</string>
 
     <!-- QuickSettings: Tiles: 4 columns -->
     <string name="qs_four_columns_title">Show four tiles per row</string>

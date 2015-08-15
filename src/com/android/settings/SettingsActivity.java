@@ -118,6 +118,8 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.slim.qs.QSTiles;
+import com.android.settings.slim.PieControl;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -314,6 +316,7 @@ public class SettingsActivity extends Activity
             BlacklistSettings.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
             QSTiles.class.getName(),
+            PieControl.class.getName(),
             DisplayRotation.class.getName()
         };
 
