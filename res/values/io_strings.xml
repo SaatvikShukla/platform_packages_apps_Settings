@@ -396,4 +396,8 @@
     <string name="show_volume_icon_title">Volume Mode Icon</string>
     <string name="show_volume_icon_summary">Show volume mode icon, enabled by default</string>
 
+    <!--- Double Tap To Sleep on nav bar -->
+    <string name="double_tap_to_sleep_navbar_summary">Double-tap on the navigation bar to turn off the display</string> 
+    <string name="double_tap_to_sleep_nav_title">Double-tap to sleep</string> 
+
 </resources>
