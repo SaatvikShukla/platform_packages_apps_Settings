@@ -230,6 +230,14 @@
                 android:fragment="com.android.settings.SecuritySettings"
                 android:icon="@drawable/ic_settings_security"
                 />
+ 
+        <!-- Lock screen -->
+        <dashboard-tile
+                android:id="@+id/lockscreen_settings"
+                android:title="@string/lockscreen_title"
+                android:fragment="com.android.settings.slim.LockscreenSettings"
+                android:icon="@drawable/ic_settings_lockscreen"
+                />
 
         <!-- Account -->
         <dashboard-tile
