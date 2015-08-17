@@ -27,7 +27,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ServiceInfo;
 import android.content.res.Configuration;
 import android.database.ContentObserver;
-import android.hardware.CmHardwareManager;
 import android.hardware.input.InputDeviceIdentifier;
 import android.hardware.input.InputManager;
 import android.hardware.input.KeyboardLayout;
@@ -64,6 +63,8 @@ import com.android.settings.VoiceInputOutputSettings;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -111,7 +112,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private Intent mIntentWaitingForResult;
     private InputMethodSettingValuesWrapper mInputMethodSettingValues;
     private DevicePolicyManager mDpm;
-    private CmHardwareManager mCmHardwareManager;
+    private CMHardwareManager mHardware;
 
     private SwitchPreference mHighTouchSensitivity;
     private SwitchPreference mTouchscreenHovering;
@@ -126,7 +127,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         mImm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         mInputMethodSettingValues = InputMethodSettingValuesWrapper.getInstance(activity);
 
-        mCmHardwareManager = (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
+        mHardware = CMHardwareManager.getInstance(activity);
 
         try {
             mDefaultInputMethodSelectorVisibility = Integer.valueOf(
@@ -184,21 +185,21 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
 
         if (pointerSettingsCategory != null) {
 
-            if (!mCmHardwareManager.isSupported(
-                    CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
+            if (!mHardware.isSupported(
+                    CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
                 pointerSettingsCategory.removePreference(mHighTouchSensitivity);
                 mHighTouchSensitivity = null;
             } else {
                 mHighTouchSensitivity.setChecked(
-                        mCmHardwareManager.get(CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY));
+                        mHardware.get(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY));
             }
 
-            if (!mCmHardwareManager.isSupported(CmHardwareManager.FEATURE_TOUCH_HOVERING)) {
+            if (!mHardware.isSupported(CMHardwareManager.FEATURE_TOUCH_HOVERING)) {
                 pointerSettingsCategory.removePreference(mTouchscreenHovering);
                 mTouchscreenHovering = null;
             } else {
                 mTouchscreenHovering.setChecked(
-                        mCmHardwareManager.get(CmHardwareManager.FEATURE_TOUCH_HOVERING));
+                        mHardware.get(CMHardwareManager.FEATURE_TOUCH_HOVERING));
             }
 
             if (pointerSettingsCategory.getPreferenceCount() == 0) {
@@ -376,10 +377,10 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                 return true;
             }
         } else if (preference == mHighTouchSensitivity) {
-            return mCmHardwareManager.set(CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
+            return mHardware.set(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
                     mHighTouchSensitivity.isChecked());
         } else if (preference == mTouchscreenHovering) {
-            return mCmHardwareManager.set(CmHardwareManager.FEATURE_TOUCH_HOVERING,
+            return mHardware.set(CMHardwareManager.FEATURE_TOUCH_HOVERING,
                     mTouchscreenHovering.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -696,22 +697,21 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
 
     public static void restore(Context context) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        final CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        if (cmHardwareManager.isSupported(CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
+        final CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        if (hardware.isSupported(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
             final boolean enabled = prefs.getBoolean(KEY_HIGH_TOUCH_SENSITIVITY,
-                    cmHardwareManager.get(CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY));
-            if (!cmHardwareManager.set(CmHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
+                    hardware.get(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY));
+            if (!hardware.set(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
                     enabled)) {
                 Log.e(TAG, "Failed to restore high touch sensitivity settings.");
             } else {
                 Log.d(TAG, "High touch sensitivity settings restored.");
             }
         }
-        if (cmHardwareManager.isSupported(CmHardwareManager.FEATURE_TOUCH_HOVERING)) {
+        if (hardware.isSupported(CMHardwareManager.FEATURE_TOUCH_HOVERING)) {
             final boolean enabled = prefs.getBoolean(KEY_TOUCHSCREEN_HOVERING,
-                    cmHardwareManager.get(CmHardwareManager.FEATURE_TOUCH_HOVERING));
-            if (!cmHardwareManager.set(CmHardwareManager.FEATURE_TOUCH_HOVERING, enabled)) {
+                    hardware.get(CMHardwareManager.FEATURE_TOUCH_HOVERING));
+            if (!hardware.set(CMHardwareManager.FEATURE_TOUCH_HOVERING, enabled)) {
                 Log.e(TAG, "Failed to restore touch hovering settings.");
             } else {
                 Log.d(TAG, "Touch hovering settings restored.");

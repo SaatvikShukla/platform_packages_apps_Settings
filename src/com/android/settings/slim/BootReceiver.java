@@ -33,7 +33,7 @@ public class BootReceiver extends BroadcastReceiver {
         /* Restore the hardware tunable values */
         DisplaySettings.restore(ctx);
         DisplayGamma.restore(ctx);
-        HardwareKeysSettings.restore(ctx);
+        HardwareKeysSettings.restoreKeyDisabler(ctx);
         VibratorIntensity.restore(ctx);
         InputMethodAndLanguageSettings.restore(ctx);
         LocationSettings.restore(ctx);

@@ -27,7 +27,6 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.hardware.CmHardwareManager;
 import android.os.Bundle;
 import android.preference.SwitchPreference;
 import android.preference.Preference;
@@ -55,6 +54,8 @@ import com.android.settings.slim.util.ShortcutPickerHelper;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, OnPreferenceClickListener,
@@ -416,9 +417,8 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                 context.getSharedPreferences("hw_key_settings", Activity.MODE_PRIVATE);
         preferences.edit().putBoolean(KEY_ENABLE_HW_KEYS, enabled).commit();
 
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        cmHardwareManager.set(CmHardwareManager.FEATURE_KEY_DISABLE, enabled);
+        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        hardware.set(CMHardwareManager.FEATURE_KEY_DISABLE, enabled);
     }
 
     @Override
@@ -576,18 +576,16 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
-    public static void restore(Context context) {
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        if (cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE)) {
-            SharedPreferences preferences =
+    public static void restoreKeyDisabler(Context context) {
+        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        if (!hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE)) {
+           SharedPreferences preferences =
                     context.getSharedPreferences("hw_key_settings", Activity.MODE_PRIVATE);
 
             boolean enabled = preferences.getBoolean(KEY_ENABLE_HW_KEYS, false);
-            cmHardwareManager.set(CmHardwareManager.FEATURE_KEY_DISABLE, enabled);
+            hardware.set(CMHardwareManager.FEATURE_KEY_DISABLE, enabled);
         }
     }
-
     private void showDialogInner(int id, String settingsKey, int dialogTitle) {
         DialogFragment newFragment =
                 MyAlertDialogFragment.newInstance(id, settingsKey, dialogTitle);

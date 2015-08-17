@@ -23,7 +23,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.ContentObserver;
-import android.hardware.CmHardwareManager;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -45,6 +44,8 @@ import com.android.settings.search.Indexable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 public class OtherSoundSettings extends SettingsPreferenceFragment implements Indexable {
     private static final String TAG = "OtherSoundSettings";
@@ -191,9 +192,8 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements In
         for (SettingPref pref : PREFS) {
             pref.init(this);
         }
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
-        if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR)) {
+        CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
+        if (!hardware.isSupported(CMHardwareManager.FEATURE_VIBRATOR)) {
             Preference preference = findPreference(KEY_VIBRATION_INTENSITY);
             if (preference != null) {
                 getPreferenceScreen().removePreference(preference);

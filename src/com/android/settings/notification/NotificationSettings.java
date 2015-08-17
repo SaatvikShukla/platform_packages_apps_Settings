@@ -59,6 +59,8 @@ import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import cyanogenmod.hardware.CMHardwareManager;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
