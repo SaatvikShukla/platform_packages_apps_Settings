@@ -57,6 +57,13 @@
             android:defaultValue="0"
             android:dependency="show_clear_all_recents" />
 
+        <!-- Shake to Clear Recents -->
+        <com.android.settings.io.SystemSettingSwitchPreference
+            android:key="shake_clean_recent"
+            android:title="@string/shake_clear_recents"
+            android:summary="@string/shake_clear_recents_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
