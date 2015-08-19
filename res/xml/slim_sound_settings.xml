@@ -45,6 +45,11 @@
     <PreferenceCategory
         android:title="@string/notifications_category_title" />
 
+    <com.android.settings.slim.SecureSettingSwitchPreference
+        android:key="volume_keys_control_ring_stream"
+        android:title="@string/volume_keys_control_ring_stream_title"
+        android:summary="@string/volume_keys_control_ring_stream_summary" />
+
     <ListPreference
         android:key="less_notification_sounds"
         android:title="@string/less_notification_sounds_title"

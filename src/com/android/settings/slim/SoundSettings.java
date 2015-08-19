@@ -47,12 +47,14 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
     private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
+    private static final String VOLUME_KEYS_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
 
     private SwitchPreference mSafeHeadsetVolume;
     private ListPreference mAnnoyingNotifications;
     private SwitchPreference mVolumeKeysControlMedia;
     private SwitchPreference mCameraSounds;
     private SwitchPreference mSwapVolumeButtons;
+    private SwitchPreference mVolumeControlRingStream;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +87,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mSwapVolumeButtons.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION, 0) != 0);
         mSwapVolumeButtons.setOnPreferenceChangeListener(this);
+
+        mVolumeControlRingStream = (SwitchPreference)
+                findPreference(VOLUME_KEYS_CONTROL_RING_STREAM);
+        int volumeControlRingtone = Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, 1);
+        if (mVolumeControlRingStream != null) {
+            mVolumeControlRingStream.setChecked(volumeControlRingtone > 0);
+        }
+
     }
 
     @Override
@@ -128,6 +139,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         if (KEY_SWAP_VOLUME_BUTTONS.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
+                    (Boolean) objValue ? 1 : 0);
+        }
+        if (VOLUME_KEYS_CONTROL_RING_STREAM.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM,
                     (Boolean) objValue ? 1 : 0);
         }
         return true;
