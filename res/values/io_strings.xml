@@ -431,4 +431,8 @@
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restart SystemUI</string>
 
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
+
 </resources>

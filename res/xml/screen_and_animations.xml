@@ -41,6 +41,13 @@
             android:summary="@string/aokp_animation_summary"
             android:fragment="com.android.settings.io.fragments.AnimationControls" />
 
+        <!-- Three-fingers-swipe to screenshot -->
+        <com.android.settings.io.SystemSettingSwitchPreference
+            android:key="three_finger_gesture"
+            android:title="@string/three_finger_gesture"
+            android:summary="@string/three_finger_gesture_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
