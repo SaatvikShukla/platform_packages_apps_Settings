@@ -446,4 +446,7 @@
 
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
 
+    <!-- Lock screen rotation -->
+    <string name="display_lockscreen_rotation_title">Lock screen</string>
+
 </resources>
