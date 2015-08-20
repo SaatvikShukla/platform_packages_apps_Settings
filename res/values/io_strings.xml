@@ -444,4 +444,6 @@
     <string name="shake_clean_notification">Clean notifications</string>
     <string name="shake_clean_notification_summary">Clean notification by shake</string>
 
+    <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
+
 </resources>
