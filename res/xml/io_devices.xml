@@ -33,17 +33,17 @@
              <Preference
                  android:id="@+id/device_samsung_i9082"
                  android:summary="@string/device_samsung_i9082_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_samsung_i9082" />
 
              <Preference
                  android:id="@+id/device_samsung_s3ve3g"
                  android:summary="@string/device_samsung_s3ve3g_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_samsung_s3ve3g" />
 
         </PreferenceCategory>
-       
+
         <PreferenceCategory
               android:id="@+id/device_category_sony"
               android:title="@string/device_category_sony_title" >
@@ -51,19 +51,19 @@
              <Preference
                  android:id="@+id/device_sony_taoshan"
                  android:summary="@string/device_sony_taoshan_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_sony_taoshan" />
 
              <Preference
                  android:id="@+id/device_sony_yuga"
                  android:summary="@string/device_sony_yuga_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_sony_yuga" />
-             
+
              <Preference
                  android:id="@+id/device_sony_leo"
                  android:summary="@string/device_sony_leo_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_sony_leo" />
 
              <Preference
@@ -72,7 +72,6 @@
                  android:selectable="false"
                  android:title="@string/device_sony_togari" />
 
- 
         </PreferenceCategory>
 
         <PreferenceCategory
@@ -87,7 +86,6 @@
 
         </PreferenceCategory>
 
-
         <PreferenceCategory
 	     android:id="@+id/device_category_motorola"
              android:title="@string/device_category_motorola_title" >
@@ -95,13 +93,13 @@
              <Preference
                  android:id="@+id/device_motorola_titan"
                  android:summary="@string/device_motorola_titan_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_motorola_titan" />
 
              <Preference
                  android:id="@+id/device_motorola_falcon"
                  android:summary="@string/device_motorola_falcon_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_motorola_falcon" />
 
              <Preference
@@ -119,7 +117,7 @@
              <Preference
                  android:id="@+id/device_yu_tomato"
                  android:summary="@string/device_yu_tomato_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_yu_tomato" />
         </PreferenceCategory>
 
@@ -130,14 +128,36 @@
              <Preference
                  android:id="@+id/device_xiaomi_cancro"
                  android:summary="@string/device_xiaomi_cancro_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_xiaomi_cancro" />
 
              <Preference
                  android:id="@+id/device_xiaomi_armani"
                  android:summary="@string/device_xiaomi_armani_summary"
-                 android:selectable="false" 
+                 android:selectable="false"
                  android:title="@string/device_xiaomi_armani" />
         </PreferenceCategory>
-        
-</PreferenceScreen> 
+
+        <PreferenceCategory
+             android:id="@+id/device_category_oneplus"
+             android:title="@string/device_category_oneplus_title" >
+
+             <Preference
+                 android:id="@+id/device_oneplus_bacon"
+                 android:summary="@string/device_oneplus_bacon_summary"
+                 android:selectable="false"
+                 android:title="@string/device_oneplus_bacon" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+             android:id="@+id/device_category_huawei"
+             android:title="@string/device_category_huawei_title" >
+
+             <Preference
+                 android:id="@+id/device_huawei_g620s"
+                 android:summary="@string/device_huawei_g620s_summary"
+                 android:selectable="false"
+                 android:title="@string/device_huawei_g620s" />
+        </PreferenceCategory>
+
+</PreferenceScreen>

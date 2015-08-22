@@ -27,7 +27,8 @@
     <string name="device_category_nexus_title">NEXUS</string>
     <string name="device_category_oneplus_title">ONE PLUS</string>
     <string name="device_category_yu_title">YU</string>
-    <string name="device_category_xiaomi_title">XIAOMI</string>   
+    <string name="device_category_xiaomi_title">XIAOMI</string>
+    <string name="device_category_huawei_title">HUAWEI</string>
 
     <!-- Samsung device Maintainers -->
     <string name="device_samsung_i9082">Galaxy Grand Duos</string>
@@ -37,9 +38,9 @@
 
     <!-- Motorola device Maintaniers -->
     <string name="device_motorola_titan">Moto G 2014</string>
-    <string name="device_motorola_titan_summary">Titan \nMaintainer - Thecrazyskull</string>
+    <string name="device_motorola_titan_summary">Titan \nMaintainer - Vatsal Koradia</string>
     <string name="device_motorola_falcon">Moto G</string>
-    <string name="device_motorola_falcon_summary">Falcon \nMaintainer - Thecrazyskull</string>
+    <string name="device_motorola_falcon_summary">Falcon \nMaintainer - Vatsal Koradia</string>
     <string name="device_motorola_condor">Moto E</string>
     <string name="device_motorola_condor_summary">Condor \nMaintainer - Vatsal Koradia</string>
 
@@ -59,7 +60,7 @@
     <string name="device_sony_taoshan">Xperia L</string>
     <string name="device_sony_taoshan_summary">Taoshan \nMaintainer - Rohan Purohit</string>
     <string name="device_sony_yuga">Xperia Z</string>
-    <string name="device_sony_yuga_summary">Yuga \nMaintainer - Rohan Purohit</string>
+    <string name="device_sony_yuga_summary">Yuga \nMaintainer - TechExhibeo</string>
     <string name="device_sony_leo">Xperia Z3</string>
     <string name="device_sony_leo_summary">Leo \nMaintainer - Rohan Purohit</string>
     <string name="device_sony_togari">Xperia ZU</string>
@@ -68,5 +69,13 @@
     <!-- Nexus device Maintaniers -->
     <string name="device_nexus5_hammerhead">Nexus 5</string>
     <string name="device_nexus5_hammerhead_summary">Hammerhead \nMaintainer - Saatvik Shukla</string>
+
+    <!-- OnePlus device Maintaniers -->
+    <string name="device_oneplus_bacon">OnePlus One</string>
+    <string name="device_oneplus_bacon_summary">Bacon \nMaintainer - Vivek_Neel</string>
+
+    <!-- Huawei device Maintaniers -->
+    <string name="device_huawei_g620s">Huawei G620S</string>
+    <string name="device_huawei_g620s_summary">G620S \nMaintainer - Nightwalkerkg</string>
 
 </resources>
