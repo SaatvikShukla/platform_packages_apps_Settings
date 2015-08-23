@@ -36,6 +36,6 @@ public class BootReceiver extends BroadcastReceiver {
         HardwareKeysSettings.restore(ctx);
         VibratorIntensity.restore(ctx);
         InputMethodAndLanguageSettings.restore(ctx);
-        LocationSettings.restore(context);
+        LocationSettings.restore(ctx);
     }
 }
