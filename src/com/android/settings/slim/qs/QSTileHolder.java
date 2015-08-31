@@ -189,6 +189,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_reboot";
                 stringId = R.string.qs_systemui_restart_tile;
                 break;
+            case QSConstants.TILE_VOLUME:
+                resourceName = "ic_qs_volume_panel";
+                stringId = R.string.qs_tile_volume_panel;
+                break;
             default:
                 return null;
         }
