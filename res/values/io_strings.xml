@@ -519,4 +519,7 @@
     <!-- Hotspot idle -->
     <string name="wifi_hotspot_mode_title">Keep WiFi Hotspot on</string>
 
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast icon</string>
+
 </resources>

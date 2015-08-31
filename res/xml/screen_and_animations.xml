@@ -48,6 +48,11 @@
             android:summary="@string/three_finger_gesture_summary"
             android:defaultValue="false" />
 
+        <com.android.settings.io.SystemSettingSwitchPreference
+            android:key="toast_icon"
+            android:title="@string/toast_icon_title"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
