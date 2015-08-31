@@ -509,6 +509,7 @@
     <string name="qs_screen_off_tile">Screen off</string>
     <string name="qs_tile_slimpie">Pie Control</string>
     <string name="qs_tile_kernel_adiutor">Kernel Adiutor</string>
+    <string name="qs_systemui_restart_tile">Restart SystemUI</string>
 
     <!-- QuickSettings: Tiles: 4 columns -->
     <string name="qs_four_columns_title">Show four tiles per row</string>
