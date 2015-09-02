@@ -42,6 +42,12 @@
         android:fragment="com.android.settings.io.VolumeSteps"
         android:title="@string/volume_steps_title" />
 
+    <com.android.settings.io.SystemSettingSwitchPreference
+        android:key="volume_panel_expanded"
+        android:title="@string/volume_panel_expanded_title"
+        android:summary="@string/volume_panel_expanded_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/notifications_category_title" />
 
