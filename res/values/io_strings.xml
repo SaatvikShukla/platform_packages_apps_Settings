@@ -529,7 +529,7 @@
     <!-- Toast Icons -->
     <string name="toast_icon_title">Toast icon</string>
 
-    <!-- StatusBar Clock style -->
+    <!-- StatusBar Clock -->
     <string name="clock_font_style_title">Clock font style</string>
     <string name="clock_font_bold">Bold</string>
     <string name="clock_font_bold_italic">Bold italic</string>
@@ -537,5 +537,7 @@
     <string name="clock_font_light">Light</string>
     <string name="clock_font_light_italic">Light italic</string>
     <string name="clock_font_normal">Normal</string>
+    <string name="status_bar_show_clock_second_title">Clock seconds</string>
+    <string name="clock_font_size_title">Font size</string>
 
 </resources>
