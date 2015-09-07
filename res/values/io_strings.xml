@@ -556,4 +556,8 @@
     <string name="clock_font_size_title">Font size</string>
     <string name="status_bar_show_clock_second_title">Clock seconds</string>
 
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
 </resources>
