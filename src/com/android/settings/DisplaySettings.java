@@ -77,6 +77,7 @@ import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
 
 import com.android.settings.slim.DisplayRotation;
+import com.android.settings.io.SeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,6 +125,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_CATEGORY = "category_doze_options";
     private static final String KEY_DOZE = "doze";
     private static final String KEY_ADVANCED_DOZE_OPTIONS = "advanced_doze_options";
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
     private final Configuration mCurConfig = new Configuration();
     private ListPreference mScreenTimeoutPreference;
@@ -132,6 +134,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mVolumeWake;
     private ListPreference mLcdDensityPreference;
+    private SeekBarPreference mScreenshotDelay;
 
     private SwitchPreference mTapToWake;
     private SwitchPreference mProximityWakePreference;
@@ -279,6 +282,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 && !mHardware.isSupported(FEATURE_TAP_TO_WAKE)) {
             advancedPrefs.removePreference(mTapToWake);
             mTapToWake = null;
+        }
+
+        mScreenshotDelay =
+                (SeekBarPreference) findPreference(SCREENSHOT_DELAY);
+        if (mScreenshotDelay != null) {
+            int screenshotDelay = Settings.System.getInt(resolver,
+                    Settings.System.SCREENSHOT_DELAY, 2);
+            mScreenshotDelay.setValue(screenshotDelay);
+            mScreenshotDelay.setOnPreferenceChangeListener(this);
         }
 
         mProximityWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
@@ -662,6 +674,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE,
                     value ? 1 : 0);
+        }
+        if (preference == mScreenshotDelay) {
+            int screenshotDelay = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
         }
         return true;
     }
