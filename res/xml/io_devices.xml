@@ -27,6 +27,18 @@
         android:selectable="false" />
 
         <PreferenceCategory
+             android:id="@+id/device_category_google"
+             android:title="@string/device_category_google_title" >
+
+            <Preference
+                 android:key="device_google_n5"
+                 android:title="@string/device_google_n5"
+                 android:summary="@string/device_google_n5_summary"
+                 android:selectable="false" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
              android:id="@+id/device_category_samsung"
              android:title="@string/device_category_samsung_title" >
 

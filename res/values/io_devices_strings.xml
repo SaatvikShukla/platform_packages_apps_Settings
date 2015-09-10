@@ -78,4 +78,8 @@
     <string name="device_huawei_g620s">Huawei G620S</string>
     <string name="device_huawei_g620s_summary">G620S \nMaintainer - Nightwalkerkg</string>
 
+    <!-- Google device Maintaniers -->
+    <string name="device_google_n5">Google Nexus 5</string>
+    <string name="device_google_n5_summary">Hammerhead \nMaintainer - Frederic Bottaro</string>
+
 </resources>
