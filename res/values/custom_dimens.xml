@@ -17,12 +17,12 @@
 
 <resources>
     <!-- Category border width -->
-    <dimen name="dashboard_border_width">6dip</dimen>
+    <dimen name="dashboard_border_width">1dip</dimen>
 
     <!-- Individual corner control -->
-    <dimen name="dashboard_radius_bottom_left">3dip</dimen>
-    <dimen name="dashboard_radius_bottom_right">6dip</dimen>
-    <dimen name="dashboard_radius_top_left">3dip</dimen>
-    <dimen name="dashboard_radius_top_right">6dip</dimen>
+    <dimen name="dashboard_radius_bottom_left">15.0dip</dimen>
+    <dimen name="dashboard_radius_bottom_right">15.0dip</dimen>
+    <dimen name="dashboard_radius_top_left">15.0dip</dimen>
+    <dimen name="dashboard_radius_top_right">15.0dip</dimen>
 
 </resources>
