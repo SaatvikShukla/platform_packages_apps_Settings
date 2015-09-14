@@ -97,12 +97,13 @@ public class IOSettings extends SettingsPreferenceFragment {
             frags[0] = new BatterySettings();
             frags[1] = new StatusBar();
             frags[2] = new NavbarSettings();
-            frags[3] = new QsSettings();
-            frags[4] = new RecentPanel();
-            frags[5] = new PowerMenuActions();
-            frags[6] = new ScreenAndAnimations();
-            frags[7] = new AppCircleSidebar();
-            frags[8] = new About();
+            frags[3] = new PieControl();
+            frags[4] = new QsSettings();
+            frags[5] = new RecentPanel();
+            frags[6] = new PowerMenuActions();
+            frags[7] = new ScreenAndAnimations();
+            frags[8] = new AppCircleSidebar();
+            frags[9] = new About();
         }
 
         @Override
@@ -127,6 +128,7 @@ public class IOSettings extends SettingsPreferenceFragment {
                     getString(R.string.battery_settings_title),
                     getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
+                    getString(R.string.pie_control_title),
                     getString(R.string.title_qs_tiles),
                     getString(R.string.recent_panel_category),
                     getString(R.string.power_menu_title),

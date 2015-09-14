@@ -58,7 +58,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
     private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
     private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
-    private static final String KEY_PIE_SETTINGS = "pie_settings";
     private static final String SEARCH_PANEL_ENABLED = "search_panel_enabled";
     private static final String PREF_RING = "navigation_bar_ring";
 
