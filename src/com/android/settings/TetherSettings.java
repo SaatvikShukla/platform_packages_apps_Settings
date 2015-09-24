@@ -136,6 +136,7 @@ public class TetherSettings extends SettingsPreferenceFragment
                 (SwitchPreference) findPreference(ENABLE_WIFI_AP);
         Preference wifiApSettings = findPreference(WIFI_AP_SSID_AND_SECURITY);
         mUsbTether = (SwitchPreference) findPreference(USB_TETHER_SETTINGS);
+        mHotspotMode = (ListPreference) findPreference(KEY_HOTSPOT_MODE);
         mBluetoothTether = (SwitchPreference) findPreference(ENABLE_BLUETOOTH_TETHERING);
 
         final Activity activity = getActivity();
