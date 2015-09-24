@@ -153,4 +153,12 @@
     <!-- Minimum prediction score required to pass a gesture as recognized -->
     <integer name="min_gesture_prediction_score">2</integer>
 
+    <declare-styleable name="SeekBarPreference">
+        <attr name="maximum" format="integer" />
+        <attr name="minimum" format="integer" />
+        <attr name="unitsLeft" format="string" />
+        <attr name="unitsRight" format="string" />
+        <attr name="interval" format="integer" />
+    </declare-styleable>
+
 </resources>
