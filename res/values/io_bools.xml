@@ -20,3 +20,16 @@
     <!-- Default value for battery light pulse -->
     <bool name="def_battery_light_pulse">true</bool>
 </resources>
+
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/custom_settings_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+        <Preference
+            android:key="aosp_navbar_settings"
+            android:fragment="com.android.settings.custom.nav.NavbarSettings"
+            android:title="@string/aosp_navigation_bar" />
+
+</PreferenceScreen>
