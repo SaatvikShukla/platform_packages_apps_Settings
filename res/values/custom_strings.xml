@@ -50,6 +50,48 @@
     <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
 
+    <string name="settings_reset_button">Reset</string>
+
+    <string name="dev_1">Sri Harsha &#91;srisurya95&#93;</string>
+    <string name="dev1_description">Lead developer, medical aspirant, AOSP lover, Themer</string>
+    <string name="dev_2">Akhil Narang &#91;fat guy&#93;</string>
+    <string name="dev2_description">Helper, AOSP and Layers and FOOD &#60;3LOVER , always hungry</string>
+    <string name="dev_info">AOSP-RRO Developers</string>
+
+    <!-- Qucik unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+
+    <!-- Language options - Volume rocker cursor control -->
+    <string name="cursor_section_header">Cursor</string>
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+
+   <!-- Wakeup section under Display settings -->
+    <string name="wakeup_section_header">Wake up</string>
+   <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+
+    <!-- Custom menus -->
+    <string name="custom_title">Custom settings</string>
+    <string name="custom_settings_title">Tweaks</string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Icon packs</string>
+
+    <!-- Expanded desktop -->
+    <string name="expanded_desktop_category">Expanded Desktop</string>
+    <string name="expanded_hide_nothing">Hide nothing</string>
+    <string name="expanded_hide_status">Hide status bar</string>
+    <string name="expanded_hide_navigation">Hide navigation bar</string>
+    <string name="expanded_hide_both">Hide both</string>
+    <string name="expanded_nothing_to_show">To add a custom per-app configuration for expanded state, set "Enabled for all" to the off position</string>
+    <string name="expanded_desktop_state">Expanded state</string>
+    <string name="expanded_enabled_for_all">Enabled for all</string>
+    <string name="expanded_user_configurable">User configurable</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -180,5 +222,18 @@
     <string name="fling_pulse_color">Pulse color</string>
     <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
     <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
+
+    <!-- SmartBar -->
+    <string name="smartbar_category">Smartbar</string>
+    <string name="smartbar_settings_title">Smartbar settings</string>
+    <string name="smartbar_editor_title">Toggle button editor</string>
+    <string name="smartbar_editor_summary">Medium press and drag to change position. Long press to show edit menu. Button position may be changed while menu is showing.</string>
+    <string name="smartbar_context_menu_position_title">Context buttons layout position</string>
+    <string name="smartbar_context_menu_position_summary">Set the position of contextual buttons such as menu and ime selector</string>
+    <string name="smartbar_right">Right</string>
+    <string name="smartbar_left">Left</string>
+    <string name="smartbar_factory_reset_title">Restore stock settings</string>
+    <string name="smartbar_factory_reset_summary">Smartbar will reset to a factory configuration</string>
+    <string name="smartbar_factory_reset_confirm">Are you sure you want to reset Smartbar to stock settings?</string>
 
 </resources>
